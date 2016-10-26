@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
@@ -43,16 +42,9 @@ namespace AG_Lab1_Integral
         public double CalculateParallel(int numThreads)
         {
             double rez = 0.0;
-            int N = Convert.ToInt32((this.b - this.a) / this.h);
-            int ost = N % numThreads;
             int[] numOfIterationsPerThread = new int[numThreads];
 
-            for( int i = 0; i < numThreads; i++)
-            {
-                numOfIterationsPerThread[i] = Convert.ToInt32(N / numThreads);
-                if (i < ost)
-                    numOfIterationsPerThread[i]++;
-            }
+            CalculateDotsCount(numThreads, ref numOfIterationsPerThread);
 
             Task<double>[] tasks = new Task<double>[numThreads];
             for (int i = 0; i < numThreads; i++)
@@ -70,6 +62,47 @@ namespace AG_Lab1_Integral
             }
 
             return rez;
+        }
+
+
+        public double CalculateWithThreads(int numThreads)
+        {
+            double rez = 0.0;
+            int[] numOfIterationsPerThread = new int[numThreads];
+            double[] results = new double[numThreads];
+
+            CalculateDotsCount(numThreads, ref numOfIterationsPerThread);
+
+            List<Thread> threads = new List<Thread>();
+
+            for (int i = 0; i < numThreads; i++)
+            {
+                int id = i;
+                double start = this.a + rez;
+                double end = start + numOfIterationsPerThread[id] * h;
+                Thread thread = new Thread(() => { results[id] = CalculateIntegral(start, end); });
+                rez += numOfIterationsPerThread[id] * h;
+                thread.Start();
+                threads.Add(thread);
+            }
+
+            foreach (var thread in threads)
+                thread.Join();
+
+            return results.Sum();
+        }
+
+        private void CalculateDotsCount(int numThreads, ref int[] numOfIterationsPerThread)
+        {
+            int n = Convert.ToInt32((this.b - this.a) / this.h);
+            int ost = n % numThreads;
+
+            for (int i = 0; i < numThreads; i++)
+            {
+                numOfIterationsPerThread[i] = Convert.ToInt32(n / numThreads);
+                if (i < ost)
+                    numOfIterationsPerThread[i]++;
+            }
         }
 
         private double CalculateIntegral(double start, double end)

@@ -7,3 +7,6 @@ C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_
 C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.csproj.GenerateResource.Cache
 C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.exe
 C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.pdb
+C:\Users\Сергей\Dropbox\Projects\Integral\AG_Lab1_Integral\bin\Debug\AG_Lab1_Integral.exe.config
+C:\Users\Сергей\Dropbox\Projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.exe
+C:\Users\Сергей\Dropbox\Projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.pdb
