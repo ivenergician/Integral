@@ -7,3 +7,12 @@ C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_
 C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.csproj.GenerateResource.Cache
 C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.exe
 C:\Users\Сашуля\Documents\Visual Studio 2013\Projects\AG_Lab1_Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.pdb
+D:\projects\Integral\AG_Lab1_Integral\bin\Debug\AG_Lab1_Integral.exe.config
+D:\projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.exe
+D:\projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.pdb
+D:\projects\Integral\AG_Lab1_Integral\bin\Debug\AG_Lab1_Integral.exe
+D:\projects\Integral\AG_Lab1_Integral\bin\Debug\AG_Lab1_Integral.pdb
+D:\projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.csprojResolveAssemblyReference.cache
+D:\projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.Form1.resources
+D:\projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.Properties.Resources.resources
+D:\projects\Integral\AG_Lab1_Integral\obj\Debug\AG_Lab1_Integral.csproj.GenerateResource.Cache
