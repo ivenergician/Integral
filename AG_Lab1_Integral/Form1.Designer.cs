@@ -73,8 +73,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.ch5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch2)).BeginInit();
@@ -165,7 +165,8 @@
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(256, 84);
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox4.Size = new System.Drawing.Size(256, 88);
             this.textBox4.TabIndex = 9;
             // 
             // label6
@@ -367,15 +368,6 @@
             this.panel1.Size = new System.Drawing.Size(848, 575);
             this.panel1.TabIndex = 26;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(866, 28);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(251, 13);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Зависимость времени вычислений от шага по х";
-            // 
             // ch5
             // 
             chartArea5.AxisX.Title = "h";
@@ -399,6 +391,15 @@
             this.ch5.Size = new System.Drawing.Size(346, 212);
             this.ch5.TabIndex = 27;
             this.ch5.Text = "chart1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(866, 28);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(251, 13);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Зависимость времени вычислений от шага по х";
             // 
             // Form1
             // 

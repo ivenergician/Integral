@@ -54,6 +54,12 @@ namespace AG_Lab1_Integral
             t1.Stop();
             textBox4.Text += "Параллельный с использованем ParallelFor:" + Environment.NewLine;
             textBox4.Text += ComposeStringResult(t1.Elapsed.Milliseconds, rez);
+            t1.Reset();
+            t1.Start();
+            rez = I.CalculateWithThreads(numThreads);
+            t1.Stop();
+            textBox4.Text += "Параллельный с использованем Threads:" + Environment.NewLine;
+            textBox4.Text += ComposeStringResult(t1.Elapsed.Milliseconds, rez);
         }
 
         static string ComposeStringResult(int time, double resault)
