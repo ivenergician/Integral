@@ -73,6 +73,7 @@ namespace AG_Lab1_Integral
             ChartTimeNumTherads();
             ChartTimeParallelVSPosled();
             ChartTimeTreeSeries();
+            ChartTimeVSh();
         }
 
         private void ChartTimeNumTherads()
@@ -214,6 +215,43 @@ namespace AG_Lab1_Integral
             t1.Stop();
             ch4.Series[2].Points.AddXY(Environment.ProcessorCount, t1.Elapsed.Milliseconds);
             
+        }
+
+        private void ChartTimeVSh()
+        {
+            ch5.Series[0].Points.Clear();
+            ch5.Series[1].Points.Clear();
+
+            double start = 0.0;
+            double end = 0.0;
+            double h = 0.0;
+            int numThreads = 0;
+
+            try
+            {
+                GetParams(out start, out end, out numThreads);
+            }
+            catch
+            {
+                textBox4.Text = "Указаны неверные параметры";
+                return;
+            }
+
+            for (h = 0.01; h > 0.00001; h *= 0.1)
+            {
+                Integral I = new Integral(start, end, h);
+
+                Stopwatch t1 = new Stopwatch();
+                t1.Start();
+                double rez = I.CalculatePosled();
+                t1.Stop();
+                ch5.Series[0].Points.AddXY(h, t1.Elapsed.Milliseconds);
+                t1.Reset();
+                t1.Start();
+                rez = I.CalculateParallel(numThreads);
+                t1.Stop();
+                ch5.Series[1].Points.AddXY(h, t1.Elapsed.Milliseconds);
+            }
         }
 
         private void GetParams(out double start, out double end, out double h, out int numThreads)
